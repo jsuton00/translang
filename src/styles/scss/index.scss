@@ -1,0 +1,15 @@
+//base
+@import './base/typography';
+@import './base/colours';
+@import './base/settings';
+@import './base/resets';
+@import './base/app';
+
+//layout
+@import './layout/header';
+@import './layout/translation';
+
+//components
+@import './components/translateInput';
+@import './components/languageSelect';
+@import './components/translatedText';

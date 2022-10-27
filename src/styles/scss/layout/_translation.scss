@@ -1,0 +1,41 @@
+.translation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: $spacing-def;
+
+	&-controls {
+		background: rgba(255, 255, 255, 0.25);
+		box-shadow: 0 $spacing-sm $spacing-xxl 0 rgba(31, 38, 135, 0.37);
+		backdrop-filter: blur($spacing-xxs);
+		-webkit-backdrop-filter: blur($spacing-xxs);
+		border-radius: 0.625rem;
+		border: $spacing-primary solid rgba(255, 255, 255, 0.18);
+		padding: $spacing-def;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+
+		div {
+			flex-basis: 32%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			padding: $spacing-def;
+
+			@media (min-width: 320px) and (max-width: 728px) {
+				flex-basis: 100%;
+			}
+
+			@media (min-width: 728px) {
+				flex-basis: 33%;
+			}
+		}
+	}
+}

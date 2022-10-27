@@ -1,0 +1,31 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 4rem;
+	box-shadow: 0 $spacing-secondary $spacing-xxs 0 rgba(0, 0, 0, 0.2);
+	padding: $spacing-xxs 0;
+
+	&-row {
+		align-items: center;
+		width: 100%;
+		padding: $spacing-xxs $spacing-xxl;
+	}
+}
+
+.app-brand {
+	display: flex;
+	align-items: baseline;
+	width: 100%;
+	font-size: $font-size-base;
+	color: $white;
+
+	&-logo {
+		width: 2rem;
+		font-size: $font-size-xxl;
+		margin-right: 1rem;
+		color: $white;
+	}
+}

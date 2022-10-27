@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { FaLanguage } from 'react-icons/fa';
+import LanguageSelect from './components/LanguageSelect';
+import TranslateInput from './components/TranslateInput';
+import TranslatedText from './components/TranslatedText';
+import Header from './components/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	const [language, setLanguage] = useState('');
+	const [text, setText] = useState('');
+	return (
+		<>
+			<Header />
+			<main className="main">
+				<div className="translation container">
+					<div id="translation-controls" className="translation-controls row">
+						<TranslateInput inputValue={text} changeValue={setText} />
+						<LanguageSelect language={language} selectLanguage={setLanguage} />
+						<TranslatedText text={text} language={language} />
+					</div>
+				</div>
+			</main>
+		</>
+	);
+};
 
 export default App;
